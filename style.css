@@ -1,0 +1,76 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  background: #f2f2f2;
+}
+
+.contenedor { text-align: center; }
+h1 { margin-bottom: 25px; }
+
+.reloj {
+  --color-reloj: #2563eb;
+  width: 300px;
+  height: 300px;
+  border: 8px solid var(--color-reloj);
+  border-radius: 50%;
+  background: white;
+  position: relative;
+  margin: 0 auto 25px;
+  transition: border-color 0.3s ease;
+}
+
+.marca {
+  position: absolute;
+  font-size: 22px;
+  font-weight: bold;
+  color: #222;
+}
+
+.marca-12 { top: 15px; left: 50%; transform: translateX(-50%); }
+.marca-3 { right: 17px; top: 50%; transform: translateY(-50%); }
+.marca-6 { bottom: 15px; left: 50%; transform: translateX(-50%); }
+.marca-9 { left: 17px; top: 50%; transform: translateY(-50%); }
+
+.manecilla {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform-origin: bottom center;
+  transform: translateX(-50%) rotate(0deg);
+  border-radius: 10px;
+  background: var(--color-reloj);
+}
+
+.hora { width: 8px; height: 70px; }
+.minuto { width: 6px; height: 95px; }
+.segundo { width: 3px; height: 110px; background: #ef4444; }
+
+.centro {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--color-reloj);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+  padding: 12px 22px;
+  font-size: 16px;
+  cursor: pointer;
+  background: #222;
+  color: white;
+}
+
+button:hover { opacity: 0.85; }
+#mensaje { margin-top: 14px; color: #555; }
