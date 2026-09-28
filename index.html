@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reloj Interactivo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="contenedor">
+    <h1>Reloj Interactivo</h1>
+    <div class="reloj" id="reloj">
+      <div class="marca marca-12">12</div>
+      <div class="marca marca-3">3</div>
+      <div class="marca marca-6">6</div>
+      <div class="marca marca-9">9</div>
+      <div class="manecilla hora" id="hora"></div>
+      <div class="manecilla minuto" id="minuto"></div>
+      <div class="manecilla segundo" id="segundo"></div>
+      <div class="centro"></div>
+    </div>
+    <button id="cambiarColor" type="button">Cambiar color</button>
+    <p id="mensaje" aria-live="polite">Toca el botón para cambiar el color.</p>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
