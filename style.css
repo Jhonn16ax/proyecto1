@@ -23,6 +23,15 @@ h1 { margin-bottom: 25px; }
   position: relative;
   margin: 0 auto 25px;
   transition: border-color 0.3s ease;
+  animation: moverCirculo 5s ease-in-out infinite;
+}
+
+@keyframes moverCirculo {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(10px, -6px); }
+  50% { transform: translate(0, -12px); }
+  75% { transform: translate(-10px, -6px); }
+  100% { transform: translate(0, 0); }
 }
 
 .marca {
@@ -74,3 +83,7 @@ button {
 
 button:hover { opacity: 0.85; }
 #mensaje { margin-top: 14px; color: #555; }
+
+@media (prefers-reduced-motion: reduce) {
+  .reloj { animation: none; }
+}
